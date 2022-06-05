@@ -61,7 +61,7 @@ WHERE location like '%income%'
 GROUP BY location,population
 ORDER BY TotalDeathcount desc
 
---income group with highest DEATH count
+--Death percentage in kenya
 SELECT SUM(new_cases) as total_cases,SUM(cast(new_deaths as int)) as Total_deaths,
 SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage
 FROM portfolio..CovidDeaths$
